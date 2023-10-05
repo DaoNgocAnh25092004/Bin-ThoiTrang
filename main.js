@@ -1,11 +1,11 @@
 // ---------Hình ảnh chuyển đầu trang web-------------
 var imgSliders = [
-    '/assets/image/img_set/anh_1.webp',
-    '/assets/image/img_slider/Bia1.jpg',
-    '/assets/image/img_slider/Bia5.jpg',
-    '/assets/image/img_slider/Bia4.jpg',
-    '/assets/image/img_slider/Bia3.webp',
-    '/assets/image/img_slider/Bia6.jpg'
+    'assets/image/img_slider/Bia2.webp',
+    'assets/image/img_slider/Bia1.jpg',
+    'assets/image/img_slider/Bia5.jpg',
+    'assets/image/img_slider/Bia4.jpg',
+    'assets/image/img_slider/Bia3.webp',
+    'assets/image/img_slider/Bia6.jpg'
 ]
 var imgIndexSliders = 0;
 function changeImage () {

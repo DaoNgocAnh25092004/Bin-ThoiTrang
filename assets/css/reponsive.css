@@ -1,0 +1,276 @@
+@media only screen and (min-width: 1024px){
+    .content__product-row .item__shirt:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 0 10px red;
+        cursor: pointer;
+    }
+    .footer__addres-item h2 {
+        margin: 5px 0;
+    }
+    .item__shirt:hover .normal-image {
+        opacity: 0;
+    }
+    
+    .item__shirt:hover .hover-image {
+        opacity: 1;
+    }
+    .item__shirt:hover .out-of-stock {
+        color: red;
+        background-color: #000;
+    }
+    .footer__header-on--menu {
+        display: none;
+    }
+    .footer__header-close--menu {
+        display: none;
+    }
+    .content__user-login--submit:hover {
+        background-color: #000;
+        color: white;
+    }
+}
+
+
+/* Ẩn nút menu trên màn hình lớn hơn 740px */
+@media only screen and (min-width: 741px) {
+    .header__btn i{
+        display: none;
+    }
+    .header__menu-close {
+        display: none;
+    }
+       
+    
+}
+
+/* Hiển thị nút menu trên màn hình nhỏ hơn hoặc bằng 740px */
+@media only screen and (max-width: 740px) {
+    /* Header */
+    .header__btn > i {
+        font-size: 2.7rem;
+        font-weight: 900;
+    }
+    .header__btn--logo {
+        margin-left: 50px;
+        margin-top: 5px;
+        font-size: 2.5rem;
+    }
+
+    .header__navbar-item--menu{
+        display: none;
+        background-color: #fff;
+        width: 100vh;
+        height: 100vh;
+        margin-top: -25px;
+        margin-left: -180px;
+        z-index: 2;
+        animation: anmtMenu 1s ease ;
+    }
+    @keyframes anmtMenu {
+        from {
+            transform: translateX(300px);
+        } to {
+            transform: translateX(0);
+        }
+    }
+    .header__menu-item { 
+        display: flex;
+        font-size: 1.9rem;
+        margin-top: -50px;
+        padding-block: 60px;
+
+    }
+    .header__navbar-icon {
+        margin-left: -37px;
+        padding-right: 25px;
+        font-size: 1.8rem;
+        margin-top: 5px;
+    }
+    .header__navbar-icon--link---user {
+        margin-left: 12px;
+    }
+    .icon-user {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        background-color: white;
+        margin-top: 26px;
+        margin-left: -200px; 
+        margin-right: -20px;
+        padding: 30px;
+        border-radius: 30px;
+        animation:anmtUser 1s ease-in-out;
+    }
+    @keyframes anmtUser {
+        from {
+            transform: translateY(-150px);
+        } to {
+            transform: translateY(0);
+        }
+    }
+    .header__navbar-icon--link {
+        margin-left: 10px;
+    }
+    /* symbol logo trang chính */
+    .symbol__title{
+        font-size: 20px;
+        padding: 10px;
+    }
+    #symbol__logo > img{
+        width: 400px;
+        height: 14  0px;
+    }
+    /* Phần sản Phẩm bán chạy */
+    #content__selling-product h1 {
+        padding: 20px 20px 0 20px;
+        font-size: 20px;
+    }
+    .content__product-row .item__shirt {
+        min-height: 200px;
+        box-shadow: none;
+        border-radius: 0;
+    
+    }
+    .content__product-row img {
+        height: 200px;
+        border-radius: 0;
+    }
+    .content__product-row img:hover{
+
+    }
+    .content__product-name {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .hover-image{
+    }
+    .content__product-price p {
+        font-size: 15px;
+    }
+    /*footer*/
+    #footer {
+        height: 100%;
+        display: grid;
+    }
+    .footer__header {
+        display: block;
+        
+    }
+    .footer__NameOrigin {
+        margin: 20px 0  0 10px;
+        width: calc(95%);
+        border-bottom: 1px solid #ccc; 
+        padding-bottom: 10px;
+    }
+    .footer__NameOrigin--name,
+    .footer__addre-name,
+    .footer__support-name,
+    .footer__TakeCareOf-name {
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .footer__header-on--menu {
+        position: absolute;
+        right: 0;
+        margin-right: 20px;
+        font-size: 15px;
+        display: block;
+    }
+    .footer__TakeCareOf-name > i {
+        font-size: 15px;
+    }
+    .footer__header-close--menu {
+        position: absolute;
+        right: 0;
+        margin-right: 20px;
+        font-size: 15px;
+        display: none;
+    }
+    .footer__NameOrigin h1 {
+        margin: 20px 0 10px;
+        font-size: 20px;
+    }
+    .footer__header-menu--item {
+        display: none;
+    }
+    .footer__NameOrigin-content {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .footer__addres {
+        margin: 20px 0  0 10px;
+        width: calc(95%);
+        border-bottom: 1px solid #ccc; 
+        padding-bottom: 10px;
+    }
+    .footer__addres-item  {
+        display: none;
+    }
+    .footer__addres h1 {
+        margin: 20px 0 15px;
+        font-size: 20px;
+    }
+    .footer__addres p {
+        display: block;
+        line-height: 20px;
+    }
+    .footer__support {
+        margin: 20px 0  0 10px;
+        width: calc(95%);
+        border-bottom: 1px solid #ccc; 
+        padding-bottom: 10px;
+    }
+    .footer__support h1 { 
+        margin-bottom: 20px;
+    }
+    .footer__TakeCareOf {
+        margin: 20px 0  0 10px;
+        width: calc(95%);
+        border-bottom: 1px solid #ccc; 
+        padding-bottom: 10px;
+    }
+    .footer__TakeCareOf h1 {
+        margin-bottom: 20px;
+    }
+    .footer__contact-info i {
+        font-size: 40px;
+    }
+    .footer__SocialNetwork {
+        display: block;
+        margin-top: 20px
+    }
+    .footer__SocialNetwork p {
+        font-size: 10px;
+        text-align: center;
+    }
+    .footer__SocialNetwork-icon {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .footer__SocialNetwork i {
+        font-size: 10px;
+    }
+    /* phần đăng nhập */
+    .content__user-login--input,
+    .content__user-login--input---password,
+    .content__user-login--submit {
+        width: 350px;
+    }
+    .content__user-login--icon---star,
+    .content__user-login--eye,
+    .content__user-login--eye---close {
+        margin:27px 0 0 320px;
+    }
+    .content__user-login--icon---star {
+        margin-top: 20px;
+    }
+    .content__user-login--eye,
+    .content__user-login--eye---close {
+        margin-top: 20px;
+    }
+    .content__user-login--submit{
+        background-color: #000;
+        color: #fff;
+    }
+}

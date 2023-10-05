@@ -1,0 +1,397 @@
+/* Phần header */
+#header {
+    height: 80px;
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    /* fixed cố định  */
+    position: fixed;
+    z-index: 1;
+    width: 100%; /* này để full chiều ngang*/
+    top: 0; /*làm cho nó dính sát trên kia k chỉnh lă chuột bị lỗi*/
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    color: var(---black-color);
+}
+#header li {
+    list-style: none;  /* xử lý dấu . của thẻ li */
+    display: block;
+    
+}
+.header__navbar{
+    padding: 15px;
+}
+#logo {
+    font-size: 4rem;
+    font-family: cursive;
+    white-space: nowrap; /*chữ không xuống dòng */
+}
+.header__menu-item {
+    margin: 0 30px;   
+    font-size: 2.1rem;
+    font-weight: 100;
+}
+
+.header__menu-item-link {
+    text-decoration: none;
+    color: var(---black-color);
+}
+.header__menu-item-link:hover{
+    color: red;
+    border-bottom: 1px solid #000; 
+    padding-bottom: 10px; 
+}
+.header__menu-item--underlined {
+    border-bottom: 1px solid #000; 
+    padding-bottom: 10px; 
+
+}
+.header__navbar-icon{
+    margin: 0 20px;   
+    font-size: 1.7rem;
+}
+.header__navbar-icon--link  {
+    text-decoration: none;
+    color: var(---black-color);
+    margin-left: -20px;
+
+}
+.header__navbar-icon--link:hover {
+    color: red;
+}
+.header__navbar-icon--user {
+    text-decoration: none;
+    color: var(---black-color);
+}
+.header__navbar-icon--user:hover {
+    color: red;
+    border-bottom: 1px solid #000; 
+    padding-bottom: 10px; 
+}
+.icon-user {
+    margin-top: -15px;
+    margin-left: 30px;
+}
+/* hiệu ứng làm mờ khi click vào menu */
+.nav__overlay1 {
+    position: fixed;
+    top : -15px !important;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    display: none;;
+    margin: 0; /* Đặt margin về 0 */
+    padding: 0; /* Đặt padding về 0 */
+
+}
+.nav__overlay2 {
+    position: fixed;
+    top : -15px !important;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    display: none;;
+    margin: 0; /* Đặt margin về 0 */
+    padding: 0; /* Đặt padding về 0 */
+
+}
+/* Mobile btn */
+.header__menu-close {
+    font-size: 2.2rem;
+    position: absolute;
+    color: black;
+    top: 2rem;
+    right: 2rem;
+    display: none;
+    z-index: 3;
+}
+.header__menu-close > i {
+    font-weight: 900;
+}
+/* Phần slider */
+#slider {
+    margin-top: 80px;
+    padding-top: 50%;
+    background: url('/assets/image/img_slider/Bia2.webp');
+    /* Xác định vị trí bắt đầu hiển thị hình nền: */
+    background-position: top center;
+    /* Tùy chỉnh cách hình ảnh nền được trình bày: */
+    background-size: cover;
+    /* Đặt hình ảnh nền không được lặp lại: */
+    background-repeat: no-repeat;
+}
+/* Sản Phẩm bán chạy */
+#content__selling-product h1 {
+    padding: 50px;
+    font-size: 40px;
+    text-align: center;
+}
+/* Phần Thương hiệu trang chính */
+.symbol__title{
+    font-size: 40px;
+    text-align: center;
+    padding: 40px;
+    font-weight: 900;
+}
+#symbol__logo{
+    text-align: center;
+}
+/* footer */
+#footer {
+    background-color: black;
+    height: 300px;
+}
+.footer__header {
+    color: var( ---white-color);
+    display: flex;
+  
+}
+.footer__NameOrigin,
+.footer__addres,
+.footer__support,
+.footer__TakeCareOf{
+    flex: 1;
+    margin: 30px 60px 0;
+}
+.footer__NameOrigin--name,
+.footer__addre-name,
+.footer__support-name ,
+.footer__TakeCareOf-name {
+    margin-bottom: 30px;
+    font-weight:900 ;
+}
+
+.footer__addres > h1,
+.footer__support > h1,
+.footer__TakeCareOf > h1{
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight:900 ;
+}
+.footer__NameOrigin-content,
+.footer__addres-item > p,
+.footer__support ul li {
+    font-size: 14px;
+    font-weight: 100;
+}
+.footer__addres > p {
+    margin: 3px 0;
+}
+
+.footer__addres-NumberPhone:hover,
+.footer__addres-email:hover {
+    color: red;
+    cursor: pointer;
+}
+.footer__support ul li {
+    margin: 4px 0 0 15px;;
+}
+.footer__support ul li:hover {
+    color: red;
+    cursor: pointer;
+}
+.footer__TakeCareOf  i {
+   font-size: 50px;
+}
+.footer__contact-info{
+    display: flex;
+    align-items: center;
+}
+.footer__NumberPhone,
+.footer__email {
+    font-weight: 100;
+}
+.footer__NumberPhone:hover,
+.footer__email:hover {
+    color: red;
+    cursor: pointer;
+}
+.footer__NumberPhone {
+    margin-left: 15px;
+    font-size: 25px;
+}
+.footer__email {
+    margin-top: 20px;
+}
+.footer__SocialNetwork {
+    color: var( ---white-color);
+    display: flex;
+    margin-top: 50px;
+    font-size: 15px;
+    justify-content: center;
+    cursor: pointer;
+} 
+.footer__SocialNetwork i {
+    margin: 0 10px;
+}
+.footer__SocialNetwork i:hover {
+    color: red;
+}
+
+/* content product áo */
+.item__shirt {
+    position: relative;
+    
+}
+.content__product-row .item__shirt {
+    margin: 30px 0 30px 0;
+    min-height: 380px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+    border-radius: 12px;
+
+}
+.content__product-row img {
+    height: 280px;
+    border-radius: 12px;
+}
+.content__product-name {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 25px;
+}
+.content__product-price p{
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.content__product-pricereal {
+    color: red;
+}
+.content__product-discount {
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+.normal-image {
+    position: absolute;
+    transition: opacity 0.3s ease; 
+    width: 100%;
+}
+
+.hover-image {
+    transition: opacity 0.3s ease;
+    width: 100%;
+    opacity: 0;
+
+}
+
+
+.content__product-name {
+    white-space: nowrap; /* Ngăn chữ xuống dòng */
+    overflow: hidden; /* Ẩn nội dung bị tràn ra ngoài */
+    text-overflow: ellipsis; /* Hiển thị dấu ... khi chữ tràn */
+    max-width: 100%; /* Đảm bảo chữ không tràn ra ngoài chiều rộng của phần tử cha */
+}
+.out-of-stock {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: black; 
+    color: #fff;
+    font-size: 15px;
+    font-weight: 900;
+    white-space: nowrap;
+    padding: 12px 10px;
+    border-radius: 12px;
+}
+
+/* logo delivery */
+.symbol__logo--delivery img {
+   width: 100%;
+   padding: 10px;
+}
+/* user login */
+#content__user {
+    margin: 100px 0 100px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.content__user-login {
+    padding: 20px;
+}
+.content__user-login--title {
+    margin: 30px 0;
+    font-size: 25px;
+    font-weight: 500;
+}
+.content__user-login--icon {
+    position: absolute;
+    margin: 20px 10px 0;
+    font-size: 17px;
+    
+}
+.content__user-login--icon---star {
+    position: absolute;
+    margin:27px 0 0 570px;
+    font-size: 25px;
+    color: red;
+    display: block;
+    cursor: pointer;
+}
+.content__user-login--input {
+    padding: 10px 30px 10px 40px;
+    margin: 10px 0;
+    width: 600px;
+    border-radius: 5px;
+}
+.content__user-login--input---password {
+    padding: 10px 40px 10px 40px;
+    margin: 10px 0;
+    width: 600px;
+    border-radius: 5px;
+}
+.content__user-login--submit {
+    padding: 10px 0;
+    margin: 10px 0;
+    width: 600px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.content__user-login--exception {
+    display: flex;
+    justify-content: space-around;
+}
+.content__user-login--forgotpassword {
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+}
+.content__user-login--forgotpassword:hover {
+    color: red;
+    
+}
+.content__user-login--register {
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+}
+.content__user-login--register:hover {
+    color: red;
+}
+/* eye pass word */
+.content__user-login--eye {
+    position: absolute;
+    margin:22px 0 0 560px;
+    font-size: 18px;
+    display: none;
+    cursor: pointer;
+}
+.content__user-login--eye---close {
+    position: absolute;
+    margin:22px 0 0 560px;
+    font-size: 18px;
+    display: block;
+    cursor: pointer;
+}

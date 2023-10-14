@@ -542,12 +542,7 @@
     border: 1px solid gainsboro;
     transition: transform 0.3s ease-out;
 }
-.content__information-item--buy---add:hover {
-    background-color: red;
-    color: #fff;
-    border: 1px solid red;
-    transform: scale(1.1);
-}
+
 .content__information-item--delivery {
     display: flex;
     border-bottom: 1px solid #ccc;

@@ -28,6 +28,12 @@
         background-color: #000;
         color: white;
     }
+    .content__information-item--buy---add:hover {
+        background-color: red;
+        color: #fff;
+        border: 1px solid red;
+        transform: scale(1.1);
+    }
 }
 
 
@@ -309,5 +315,16 @@
     .content__information-item--buy---add {
         width: 200px;
         margin: 20px 0 0 10px;
+    }
+    .content__information-item--detail p {
+        margin: 8px 30px 0 0;
+    }
+    .content__information-item--delivery_service p {
+        margin: 19px 30px 0 0;
+    }
+    .content__information-item--buy---add {
+        background-color: red;
+        color: #fff;
+        border: 1px solid red;
     }
 }

@@ -192,7 +192,18 @@
     }
     .footer__header-menu--item {
         display: none;
+        animation: slideDown 1s ease;
     }
+    @keyframes slideDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     .footer__NameOrigin-content {
         font-size: 12px;
         line-height: 20px;
@@ -272,5 +283,31 @@
     .content__user-login--submit{
         background-color: #000;
         color: #fff;
+    }
+    /* Thông tin sản phẩm */ 
+    .mobile-reverse {
+        display: flex;
+        flex-direction: column-reverse; /*Đảo ngươc thứ tự trên dưới*/
+    }
+    .content__information-item--secondary__image {
+        display: flex;
+    }
+    .content__information-item--secondary__image {
+        height: 130px;
+    }
+    .content__information-item--secondary__image---item{
+        margin-left: 10px;
+    }
+    .content__information-item--secondary__image---item img {
+        height: 100px;
+        width: 100px;
+        margin: 0 10px;
+    }
+    .content__information-item--title { 
+        line-height: 25px;
+    }
+    .content__information-item--buy---add {
+        width: 200px;
+        margin: 20px 0 0 10px;
     }
 }

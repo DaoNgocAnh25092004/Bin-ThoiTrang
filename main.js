@@ -76,28 +76,34 @@ iconUser.addEventListener('click', closeUserHeader);
 // ----------------------Hiện menu footer --------------------
 const onMenuFooters = document.querySelectorAll('.footer__header-on--menu');
 const closeMenuFooters = document.querySelectorAll('.footer__header-close--menu');
-const itemFooters = document.querySelectorAll('.footer__header-menu--item');
-
+const textFooters = document.querySelectorAll('.footer__header-menu--item');
+const itemFooters = document.querySelectorAll('.footer__touch-click');
+// biến để theo dõi sự kiện click itemFooters
+let itemFootersClicked = new Array(itemFooters.length).fill(true);
 function clickOnMenuFooter() {
-    // Lặp qua tất cả các nút 'onMenuFooter' và thực hiện thay đổi trạng thái
-    onMenuFooters.forEach((onMenuFooter, index) => {
-        onMenuFooter.addEventListener('click', () => {
-            onMenuFooter.style.display = 'none';
-            closeMenuFooters[index].style.display = 'block';
-            itemFooters[index].style.display = 'block';
-        });
-    });
-
-    // Lặp qua tất cả các nút 'closeMenuFooter' và thực hiện thay đổi trạng thái
-    closeMenuFooters.forEach((closeMenuFooter, index) => {
-        closeMenuFooter.addEventListener('click', () => {
-            onMenuFooters[index].style.display = 'block';
-            closeMenuFooter.style.display = 'none';
-            itemFooters[index].style.display = 'none';
-        });
-    });
+   itemFooters.forEach((itemFooters, index) => {
+        itemFooters.addEventListener('click', () => {
+            if(itemFootersClicked[index]) {
+                onMenuFooters[index].style.display = 'none';
+                closeMenuFooters[index].style.display = 'block';
+                textFooters[index].style.display = 'block';
+                itemFootersClicked[index] = false;
+            } else {
+                onMenuFooters[index].style.display = 'block';
+                closeMenuFooters[index].style.display = 'none';
+                textFooters[index].style.display = 'none';
+                itemFootersClicked[index] = true;
+            }
+        })
+   })
 }
-
-// Gọi hàm để thiết lập sự kiện cho các nút
 clickOnMenuFooter();
 
+//----------------------------Click menu items -------------------------------
+const shirtItemsAll = document.querySelectorAll('.item__shirt')
+shirtItemsAll.forEach(shirtItems => {
+    shirtItems.addEventListener('click', () => {
+        const shirtItemId = shirtItems.getAttribute('data-product-id');
+        window.location.href = `thongtinsanpham.html?id=${shirtItemId}`;
+    })
+})

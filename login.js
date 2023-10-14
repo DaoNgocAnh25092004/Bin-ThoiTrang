@@ -80,16 +80,18 @@ clickOnMenuFooter();
 const onEye = document.querySelector('.content__user-login--eye')
 const onEyeclose = document.querySelector('.content__user-login--eye---close')
 const typePassWordLogin = document.querySelector('.content__user-login--input---password')
+let onEyeFlow = false;
 function onEyeClick() {
-    if(onEyeclose.style.display === 'block'&& typePassWordLogin.type === 'password'){
-        typePassWordLogin.type = 'text'
-        onEye.style.display = 'block'
-        onEyeclose.style.display = 'none'
-        
-    } else {
+    if(onEyeFlow){
         onEye.style.display = 'none'
         onEyeclose.style.display = 'block'
         typePassWordLogin.type = 'password'
+        onEyeFlow = false;
+    } else {
+        typePassWordLogin.type = 'text'
+        onEye.style.display = 'block'
+        onEyeclose.style.display = 'none'
+        onEyeFlow = true;
     }
 }
 onEyeclose.addEventListener('click', onEyeClick);

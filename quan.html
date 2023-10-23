@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,9 @@
     <link rel="stylesheet" href="./assets/css/grid.css">
 </head>
 <div class="app">
-    <header id = "header">      
+    <header id="header">
+        <!-- màn hình mờ click giỏ hàng -->
+        <div class="cart-blurred__screen"></div>  
         <nav class="header__navbar">
             <div class="header__navbar-logo">
                 <ul class="header__navbar " id="logo">
@@ -29,7 +32,7 @@
                 </div>
                 <ul class="header__navbar header__navbar-item--menu">
                     <li class="header__menu-item">
-                        <a href="index.html" class="header__menu-item-link " >Trang chủ</a>
+                        <a href="index.html" class="header__menu-item-link ">Trang chủ</a>
                     </li>
                     <li class="header__menu-item">
                         <a href="phukien.html" class="header__menu-item-link ">Phụ Kiện</a>
@@ -38,7 +41,7 @@
                         <a href="ao.html" class="header__menu-item-link  ">Áo</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="quan.html" class="header__menu-item-link header__menu-item--underlined" >Quần</a>
+                        <a href="quan.html" class="header__menu-item-link header__menu-item--underlined">Quần</a>
                     </li>
                     <li class="header__menu-item">
                         <a href="set.html" class="header__menu-item-link">Set</a>
@@ -62,18 +65,54 @@
                             <a href="dangky.html" class="header__navbar-icon--user">Đăng Ký</a>
                         </div>
                     </li>
-                    
+
                     <li class="header__navbar-icon">
-                        <a href="" class="header__navbar-icon--link"> 
-                            <i class="ti-shopping-cart-full"></i>
+                        <a class="header__navbar-icon--link">
+                            <i class="ti-shopping-cart-full header__navbar-icon--link---cart"></i>
+                            <p class="header__navbar-icon--link---quantity_cart">0</p>
                         </a>
                     </li>
                 </ul>
             </div>
-        </nav>   
+        </nav>
         <div class="nav__overlay1"></div>
         <div class="nav__overlay2"></div>
     </header>
+
+    <div class="showCart">
+        <div class="showCart-header__cover">
+            <div class="showCart-header">
+                <div>
+                    <h2><span>0</span> sản phẩm</h2>
+                </div>
+                <div>
+                    <h1>Giỏ Hàng</h1>
+                </div>
+                <div>
+                    <h2 class="showCart-header_close">Đóng</h2>
+                </div>
+            </div>
+        </div>
+        
+        <div class="showCart-none">
+            <i class="ti-shopping-cart"></i>
+            <p>Hiện chưa có sản phẩm</p>
+        </div>
+        <div id="mycart">
+
+        </div>
+        <div class="showCart-footer">
+            <div class="showCart-footer--into__money">
+                <h2>TỔNG TIỀN:</h2>
+                <p>0₫</p>
+            </div>
+            <div class="showCart-footer--button">
+                <button>XEM GIỎ HÀNG</button>
+            </div>
+
+        </div>
+    </div>
+
     <div id="slider">
     </div>
 
@@ -88,7 +127,7 @@
                         <p class="content__product-pricereal">195,000₫</p>
                         <p class="content__product-discount">350,000₫</p>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="col l-3 m-4 c-6">
@@ -100,7 +139,7 @@
                         <p class="content__product-pricereal">390,000₫</p>
                         <p class="content__product-discount">550,000₫</p>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="col l-3 m-4 c-6">
@@ -126,14 +165,14 @@
                 </div>
             </div>
             <div class="col l-3 m-4 c-6">
-                <div class="item__shirt" data-product-id="41"data-product-id="45">
-                        <img src="./assets/image/img_trouser/anh_5.webp" alt="" class="normal-image">
-                        <img src="./assets/image/img_trouser/anh_5_hover.webp" alt="" class="hover-image">
-                        <p class="content__product-name">Bin Váy Xếp Ly - VXL</p>
-                        <div class="content__product-price">
-                            <p class="content__product-pricereal">390,000₫</p>
-                            <p class="content__product-discount">500,000₫</p>
-                        </div>
+                <div class="item__shirt" data-product-id="45">
+                    <img src="./assets/image/img_trouser/anh_5.webp" alt="" class="normal-image">
+                    <img src="./assets/image/img_trouser/anh_5_hover.webp" alt="" class="hover-image">
+                    <p class="content__product-name">Bin Váy Xếp Ly - VXL</p>
+                    <div class="content__product-price">
+                        <p class="content__product-pricereal">390,000₫</p>
+                        <p class="content__product-discount">500,000₫</p>
+                    </div>
                 </div>
             </div>
             <div class="col l-3 m-4 c-6">
@@ -148,8 +187,8 @@
                     <span class="out-of-stock">Hết hàng</span>
                 </div>
             </div>
-            <div class="col l-3 m-4 c-6" data-product-id="47">
-                <div class="item__shirt">
+            <div class="col l-3 m-4 c-6">
+                <div class="item__shirt" data-product-id="47">
                     <img src="./assets/image/img_trouser/anh_7.webp" alt="" class="normal-image">
                     <img src="./assets/image/img_trouser/anh_7_hover.webp" alt="" class="hover-image">
                     <p class="content__product-name">Bin short cargo pants Kem - DSCPK</p>
@@ -212,7 +251,7 @@
     </div>
     <footer id="footer">
         <div class="footer__header">
-            <div class="footer__NameOrigin">
+            <div class="footer__NameOrigin footer__touch-click">
                 <div class="footer__NameOrigin--name">
                     <i class="ti-angle-down footer__header-on--menu"></i>
                     <i class="ti-angle-up footer__header-close--menu"></i>
@@ -225,7 +264,7 @@
                         theo lời chia sẻ của Ngọc Anh founder.</p>
                   </div>
             </div>
-            <div class="footer__addres">
+            <div class="footer__addres footer__touch-click">
                     <div class="footer__addre-name">
                         <i class="ti-angle-down footer__header-on--menu"></i>
                         <i class="ti-angle-up footer__header-close--menu"></i>
@@ -240,7 +279,7 @@
                     <p class="footer__addres-email">Daongocanh250420042@gmail.com</p>
                 </div>
             </div>
-            <div class="footer__support">
+            <div class="footer__support footer__touch-click">
                 <div class="footer__support-name">
                     <i class="ti-angle-down footer__header-on--menu"></i>
                     <i class="ti-angle-up footer__header-close--menu"></i>
@@ -258,7 +297,7 @@
                 </div>
                 
             </div>
-            <div class="footer__TakeCareOf">
+            <div class="footer__TakeCareOf footer__touch-click">
                 <div class="footer__TakeCareOf-name">
                     <i class="ti-angle-down footer__header-on--menu "></i>
                     <i class="ti-angle-up footer__header-close--menu"></i>
@@ -284,4 +323,5 @@
         </div>
     </footer>
     <script src="main.js"></script>
+    <script src="hiengiohang.js"></script>
 </div>

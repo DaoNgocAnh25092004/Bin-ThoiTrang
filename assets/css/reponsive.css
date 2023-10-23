@@ -28,7 +28,8 @@
         background-color: #000;
         color: white;
     }
-    .content__information-item--buy---add:hover {
+    .content__information-item--buy---add:hover,
+    .showCart-footer button:hover {
         background-color: red;
         color: #fff;
         border: 1px solid red;
@@ -52,6 +53,12 @@
 /* Hiển thị nút menu trên màn hình nhỏ hơn hoặc bằng 740px */
 @media only screen and (max-width: 740px) {
     /* Header */
+    .header__navbar-icon--link---user {
+        position: absolute;
+    }
+    #logo {
+        margin-right: 30px;
+    }
     .header__btn > i {
         font-size: 2.7rem;
         font-weight: 900;
@@ -237,9 +244,7 @@
         border-bottom: 1px solid #ccc; 
         padding-bottom: 10px;
     }
-    .footer__support h1 { 
-        margin-bottom: 20px;
-    }
+
     .footer__TakeCareOf {
         margin: 20px 0  0 10px;
         width: calc(95%);
@@ -293,7 +298,7 @@
     /* Thông tin sản phẩm */ 
     .mobile-reverse {
         display: flex;
-        flex-direction: column-reverse; /*Đảo ngươc thứ tự trên dưới*/
+        flex-direction: column-reverse; /*sắp xếp ngược từ dưới lên để đảo lộn ảnh*/
     }
     .content__information-item--secondary__image {
         display: flex;
@@ -326,5 +331,198 @@
         background-color: red;
         color: #fff;
         border: 1px solid red;
+    }
+    .header__navbar-icon--link---quantity_cart {
+        margin-left: 19px;
+    }
+    /* trang thông tin sản phẩm */
+    .content__information-item-main__photo img {
+        margin-top: -39px;
+    }
+
+    .content__information-item--buy {
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+        padding: 0;
+        right: 0;
+        left: 0;
+        border-top: 1px solid #ccc;
+        z-index: 1;
+        padding-bottom: 20px;
+        box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.5);
+    }
+    .content__information-item--buy__show {
+        display: block;
+    }
+    .content__information-item--buy---add {
+        background-color: #000;
+        border: #000;
+    }
+    .header__navbar-icon--link---quantity_cart { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 50px;
+    }
+    .content__information-item--buy---add {
+        font-size: 12px;
+        border-radius: 4px;
+    }
+    .showCart__info-footer--button button {
+        border: 1px solid #000;
+        padding: 5px 11px;
+    }
+    .header__navbar-icon--link---cart {
+        margin-left: 30px;
+    }
+    .content__information-item--delivery p {
+        line-height: 15px;
+    }
+    /* show cart */
+    .showCart {
+        bottom: 0;
+        left: 0;
+        right: 0 !important;
+        z-index: 2;
+        width: 100%;
+        border: none;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        animation: crollBotToTop 0.8s ease-in-out;
+    }
+    @keyframes crollBotToTop {
+        0% {
+            opacity: 0;
+            transform: translateY(750px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .showCart__info-img {
+        align-items: center;
+        height: 85px;
+        width: 85px;
+    }
+    .showCart__info-header i {
+        font-size: 17px;
+        margin-left: 270px;
+    }
+    .showCart__info-header p {
+        line-height: 15px;
+    }
+    .showCart-footer button {
+        background-color: #000;
+        color: #fff;
+        margin-left: -10px;
+    }
+    .showCart-footer--button {
+        display: flex;
+        justify-content: center;
+    }
+    /* header showcart */
+    .showCart-header__cover {
+        background-color: #000;
+        color: #fff;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        /* border: 10px solid #000; */
+    }
+    .showCart-header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 10px; 
+    }
+    .showCart-header h1{
+        font-weight: 900;
+    }
+    .showCart-header h1 {
+        margin-left: -15px;
+        border: none;
+    }
+    .showCart-header h2:first-child, 
+    .showCart-header h2:nth-child(3) {
+        display: block;
+        margin: 20px 10px 0;
+    }
+    /* phần trang giỏ hàng */
+    #content__buy {
+        margin: 0 9px;
+    }
+    .content__buy-item {
+        border: none;
+    }
+
+    .content__buy-title {
+        margin: 120px 10px 0;
+    }
+    .content__buy-item--menu---info_box----right__header {
+        width: calc(100% - 9px);
+    }
+    .content__buy-item--menu---info_box----right__header h2 {
+        font-size: 14px;
+        line-height: 18px;
+        width: 200px;
+
+    }
+    .content__buy-item--menu---info_box----right__header p {
+        right: 0;
+        margin:-3px 10px 0 0;
+        font-size: 14px;
+    }
+    .content__buy-item--menu---info_box----right__header {
+        margin-bottom: 5px;
+    }
+    .content__buy-item--menu---info_box----right__footer button {
+        border: 1px solid #000;
+    }
+    .content__buy-item--menu---info_box----right__footer input {
+        border: 1px solid #ccc;
+    }
+    .content__buy-item--menu---info_box----right__footer {
+    }
+    .content__buy-item--menu---info_box----right__footer p {
+        margin: 0 25px;
+    }
+    .content__buy-item--menu---info_box----bill h2 {
+        margin-top: -2px;
+    }
+    .content__buy-item--menu---info_box----input__one input {
+        width: 100%;
+    }
+    .content__buy-item--menu---info_box----input__one input:nth-child(2) {
+        margin: 10px 0;
+    }
+    .content__buy-button_pay {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        z-index: 1;
+        box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.5);
+        display: flex;
+        
+    }
+    
+    .content__buy-button_pay button {
+        /* display: absolute; */
+        margin: 10px 0 -10px 0;
+        width: 350px;
+        height: 50px;
+        background-color: black
+        
+    }
+    .content__buy-item--menu {
+        border-bottom: 1px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .content__buy-info {
+        margin-bottom: 40px;
+        border: none;
     }
 }

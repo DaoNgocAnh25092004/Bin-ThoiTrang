@@ -12,13 +12,20 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/reponsive.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
 </head>
 
 <body>
+    <div id="delete-product">
+        <h1>Bạn chắc chắn muốn bỏ sản phẩm này ra khỏi giỏ hàng?</h1>
+        <div class="delete-product--button">
+            <button>Hủy</button>
+            <button>Đồng ý</button>
+        </div>
+    </div>
     <div class="app">
+        <div class="cart-blurred__screen"></div>
         <header id="header">
-            <!-- màn hình mờ click giỏ hàng -->
-            <div class="cart-blurred__screen"></div>  
             <nav class="header__navbar">
                 <div class="header__navbar-logo">
                     <ul class="header__navbar " id="logo">
@@ -34,19 +41,19 @@
                     </div>
                     <ul class="header__navbar header__navbar-item--menu">
                         <li class="header__menu-item">
-                            <a href="index.html" class="header__menu-item-link ">Trang chủ</a>
+                            <a href="index.html" class="header__menu-item-link">Trang chủ</a>
                         </li>
                         <li class="header__menu-item">
                             <a href="phukien.html" class="header__menu-item-link ">Phụ Kiện</a>
                         </li>
                         <li class="header__menu-item">
-                            <a href="ao.html" class="header__menu-item-link ">Áo</a>
+                            <a href="ao.html" class="header__menu-item-link">Áo</a>
                         </li>
                         <li class="header__menu-item">
-                            <a href="quan.html" class="header__menu-item-link  ">Quần</a>
+                            <a href="quan.html" class="header__menu-item-link">Quần</a>
                         </li>
                         <li class="header__menu-item">
-                            <a href="set.html" class="header__menu-item-link ">Set</a>
+                            <a href="set.html" class="header__menu-item-link">Set</a>
                         </li>
                     </ul>
                 </div>
@@ -62,17 +69,15 @@
                                 <i class="ti-user"></i>
                             </span>
                             <div class="header__navbar-icon icon-user">
-                                <a href="dangnhap.html" class="header__navbar-icon--user user-1 ">Đăng Nhập</a>
+                                <a href="dangnhap.html" class="header__navbar-icon--user user-1">Đăng Nhập</a>
                                 <span class="header__navbar-icon--separator">/</span>
-                                <a href="dangky.html"
-                                    class="header__navbar-icon--user header__menu-item--underlined">Đăng Ký</a>
+                                <a href="dangky.html" class="header__navbar-icon--user">Đăng Ký</a>
                             </div>
                         </li>
 
                         <li class="header__navbar-icon">
                             <a class="header__navbar-icon--link">
                                 <i class="ti-shopping-cart-full header__navbar-icon--link---cart"></i>
-                                <p class="header__navbar-icon--link---quantity_cart">0</p>
                             </a>
                         </li>
                     </ul>
@@ -82,75 +87,89 @@
             <div class="nav__overlay2"></div>
         </header>
 
-        <div class="showCart">
-            <div class="showCart-header__cover">
-                <div class="showCart-header">
-                    <div>
-                        <h2><span>0</span> sản phẩm</h2>
-                    </div>
-                    <div>
-                        <h1>Giỏ Hàng</h1>
-                    </div>
-                    <div>
-                        <h2 class="showCart-header_close">Đóng</h2>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="showCart-none">
-                <i class="ti-shopping-cart"></i>
-                <p>Hiện chưa có sản phẩm</p>
-            </div>
-            <div id="mycart">
+       
 
-            </div>
-            <div class="showCart-footer">
-                <div class="showCart-footer--into__money">
-                    <h2>TỔNG TIỀN:</h2>
-                    <p>0₫</p>
-                </div>
-                <div class="showCart-footer--button">
-                    <button>XEM GIỎ HÀNG</button>
-                </div>
+        <div id="content__buy">
+            <div class="content__buy grid wide">
+                <h1 class="content__buy-title">GIỎ HÀNG</h1>
+                <div class="row">
+                    <div class="col l-8 c-12 content__buy-item">
+                        <div class="content__buy-item--menu">
+                            <div class="content__buy-item--menu-title">
+                                <h1>Giỏ hàng của bạn</h1>
+                            </div>
+                            <div class="content__buy-item--menu---not_product">
+                                <h2>Giỏ hàng của bạn đang trống</h2>
+                            </div>
+                            <div class="content__buy-item--menu---info">
+                                <div class="content__buy-item--menu---info_title">
+                                    <h2>Bạn đang có <span>0</span> sản phẩm trong giỏ hàng</h2>
+                                </div>
+                                <!-- Hiện có một sản phẩm -->
+                                <div id="mycart">
 
+                                </div>
+                                <div class="content__buy-item--menu---info_box----note">
+                                    <h2>Ghi chú đơn hàng</h2>
+                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                </div>
+                                <div>
+                                    <div class="content__buy-item--menu---info_box----bill">
+                                        <div class="content__buy-item--menu---info_box----bill__icon">
+                                            <div>
+                                                <i class="fa-regular fa-circle-check fa-circle-check--off"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-circle-check fa-circle-check--on"></i>
+                                            </div>
+                                        </div>
+                                        <h2>Xuất hoá đơn cho đơn hàng</h2>
+                                    </div>
+                                    <div class="content__buy-item--menu---info_box----input">
+                                        <div class="content__buy-item--menu---info_box----input__one">
+                                            <input type="text" placeholder="Tên công ty...">
+                                            <input type="text" placeholder="Mã số thuế...">
+                                            <input type="email" placeholder="Email...">
+                                        </div>
+                                        <div class="content__buy-item--menu---info_box----input__two">
+                                            <input type="text" placeholder="Địa chỉ công ty...">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col l-4 c-12 content__buy-info">
+                        <div class="content__buy-info--title">
+                            <h1>Thông tin đơn hàng</h1>
+                        </div>
+                        <div class="content__buy-info--price">
+                            <h3>Tổng tiền:</h3>
+                            <p>0₫</p>
+                        </div>
+                        <div class="content__buy-note">
+                            <ul>
+                                <li>Phí vận chuyển sẽ được tính ở trang thanh toán.</li>
+                                <li>Bạn cũng có thể nhập mã giảm giá ở trang thanh toán.</li>
+                            </ul>
+                        </div>
+                        <div class="content__buy-button">
+                            <div class="content__buy-button_pay">
+                                <button>THANH TOÁN</button>
+                            </div>
+                        </div>
+                        <div class="content__buy-delivery_policy">
+                            <h2>Chính sách giao hàng</h2>
+                            <p>Hiện chúng tôi chỉ áp dụng thanh toán với đơn hàng có giá trị tối thiểu
+                                <span>150.000₫</span> trở lên.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
-
-        <div id="content__user">
-            <div class="content__user-login">
-                <h1 class="content__user-login--title">Đăng Ký Thành Viên Mới</h1>
-                <div>
-                    <i class="ti-user content__user-login--icon"></i>
-                    <i class="content__user-login--icon---star">*</i>
-                    <input type="text" placeholder="Tên" class="content__user-login--input">
-                </div>
-                <div>
-                    <i class="ti-user content__user-login--icon"></i>
-                    <i class="content__user-login--icon---star">*</i>
-                    <input type="text" placeholder="Họ" class="content__user-login--input">
-                </div>
-                <div>
-                    <i class="ti-email content__user-login--icon"></i>
-                    <i class="content__user-login--icon---star">*</i>
-                    <input type="email" placeholder="Email của bạn" class="content__user-login--input">
-                </div>
-                <div>
-                    <i class="ti-headphone-alt content__user-login--icon"></i>
-                    <i class="content__user-login--icon---star">*</i>
-                    <input type="tel" placeholder="Số điện thoại" class="content__user-login--input">
-                </div>
-                <div>
-                    <i class="ti-lock content__user-login--icon"></i>
-                    <i class="fa-regular fa-eye content__user-login--eye"></i>
-                    <i class="fa-regular fa-eye-slash content__user-login--eye---close"></i>
-                    <input type="password" placeholder="Mật Khẩu" class="content__user-login--input---password">
-                </div>
-                <div>
-                    <input type="submit" value="Đăng Ký" class="content__user-login--submit">
-                </div>
-            </div>
-        </div>
-
 
 
         <footer id="footer">
@@ -161,20 +180,20 @@
                         <i class="ti-angle-up footer__header-close--menu"></i>
                         <H1>Lịch Sử Tên</H1>
                     </div>
-                      <div class="footer__header-menu--item">
+                    <div class="footer__header-menu--item">
                         <p class="footer__NameOrigin-content">Cái tên Bin Store được tạo ra rất ngẫu hứng,
                             xuất phát từ “Chuỗi ngày u buồn về sự nghiệp,
                             tương lai trong quá khứ của chính mình”,
                             theo lời chia sẻ của Ngọc Anh founder.</p>
-                      </div>
+                    </div>
                 </div>
                 <div class="footer__addres footer__touch-click">
-                        <div class="footer__addre-name">
-                            <i class="ti-angle-down footer__header-on--menu"></i>
-                            <i class="ti-angle-up footer__header-close--menu"></i>
-                            <h1>Địa chỉ</h1>
-                        </div>
-                    <div class="footer__addres-item footer__header-menu--item"> 
+                    <div class="footer__addre-name">
+                        <i class="ti-angle-down footer__header-on--menu"></i>
+                        <i class="ti-angle-up footer__header-close--menu"></i>
+                        <h1>Địa chỉ</h1>
+                    </div>
+                    <div class="footer__addres-item footer__header-menu--item">
                         <h2>Sài gòn</h2>
                         <p>43 Huỳnh Văn Bánh P.17 Q.Phú Nhuận 1041 Luỹ Bán Bích P.Tân Thành Q.Tân Phú</p>
                         <h2>Điện Thoại</h2>
@@ -199,7 +218,7 @@
                             <li>Thông tin sở hữu</li>
                         </ul>
                     </div>
-                    
+
                 </div>
                 <div class="footer__TakeCareOf footer__touch-click">
                     <div class="footer__TakeCareOf-name">
@@ -214,22 +233,21 @@
                         </div>
                         <h2 class="footer__email">Daongocanh250420042@gmail.com</h2>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="footer__SocialNetwork">
-                    <p>Copyright © 2023 Bin Store VIETNAM. Powered by Ngọc Anh entertaiment</p>
-                    <div class="footer__SocialNetwork-icon">
-                        <i class="ti-facebook"></i>
-                        <i class="ti-instagram"></i>
-                        <i class="ti-youtube"></i>
-                    </div>
+                <p>Copyright © 2023 Bin Store VIETNAM. Powered by Ngọc Anh entertaiment</p>
+                <div class="footer__SocialNetwork-icon">
+                    <i class="ti-facebook"></i>
+                    <i class="ti-instagram"></i>
+                    <i class="ti-youtube"></i>
+                </div>
             </div>
         </footer>
-
+        <script src="giohang.js"></script>
     </div>
-    <script src="login.js"></script>
-    <script src="hiengiohang.js"></script>
+
 </body>
 
 </html>

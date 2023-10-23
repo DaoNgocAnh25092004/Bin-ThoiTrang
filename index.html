@@ -14,7 +14,9 @@
 </head>
 <body>
     <div class="app">
-        <header id = "header">      
+        <header id = "header">
+            <!-- màn hình mờ click giỏ hàng -->
+            <div class="cart-blurred__screen"></div>      
             <nav class="header__navbar">
                 <div class="header__navbar-logo">
                     <ul class="header__navbar " id="logo">
@@ -65,8 +67,9 @@
                         </li>
                         
                         <li class="header__navbar-icon">
-                            <a href="" class="header__navbar-icon--link"> 
-                                <i class="ti-shopping-cart-full"></i>
+                            <a class="header__navbar-icon--link">
+                                <i class="ti-shopping-cart-full header__navbar-icon--link---cart"></i>
+                                <p class="header__navbar-icon--link---quantity_cart">0</p>
                             </a>
                         </li>
                     </ul>
@@ -75,9 +78,44 @@
             <div class="nav__overlay1"></div>
             <div class="nav__overlay2"></div>
         </header>
-        
+
+        <div class="showCart">
+            <div class="showCart-header__cover">
+                <div class="showCart-header">
+                    <div>
+                        <h2><span>0</span> sản phẩm</h2>
+                    </div>
+                    <div>
+                        <h1>Giỏ Hàng</h1>
+                    </div>
+                    <div>
+                        <h2 class="showCart-header_close">Đóng</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="showCart-none">
+                <i class="ti-shopping-cart"></i>
+                <p>Hiện chưa có sản phẩm</p>
+            </div>
+            <div id="mycart">
+
+            </div>
+            <div class="showCart-footer">
+                <div class="showCart-footer--into__money">
+                    <h2>TỔNG TIỀN:</h2>
+                    <p>0₫</p>
+                </div>
+                <div class="showCart-footer--button">
+                    <button>XEM GIỎ HÀNG</button>
+                </div>
+
+            </div>
+        </div>
+
         <div id="slider">
         </div>
+
         <div id="content__selling-product">
             <h1 class="">Sản Phẩm Bán Chạy Của Bin Store</h1>
             <div class="content__product grid wide ">
@@ -237,5 +275,6 @@
         
     </div>
     <script src="main.js"></script>
+    <script src="hiengiohang.js"></script>
 </body>
 </html>

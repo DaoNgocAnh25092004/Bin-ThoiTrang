@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +13,12 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/reponsive.css">
 </head>
+
 <body>
     <div class="app">
-        <header id = "header">      
+        <header id="header">
+            <!-- màn hình mờ click giỏ hàng -->
+            <div class="cart-blurred__screen"></div>
             <nav class="header__navbar">
                 <div class="header__navbar-logo">
                     <ul class="header__navbar " id="logo">
@@ -30,7 +34,7 @@
                     </div>
                     <ul class="header__navbar header__navbar-item--menu">
                         <li class="header__menu-item">
-                            <a href="index.html" class="header__menu-item-link " >Trang chủ</a>
+                            <a href="index.html" class="header__menu-item-link ">Trang chủ</a>
                         </li>
                         <li class="header__menu-item">
                             <a href="phukien.html" class="header__menu-item-link ">Phụ Kiện</a>
@@ -58,24 +62,60 @@
                                 <i class="ti-user"></i>
                             </span>
                             <div class="header__navbar-icon icon-user">
-                                <a href="dangnhap.html" class="header__navbar-icon--user user-1 header__menu-item--underlined">Đăng Nhập</a>
+                                <a href="dangnhap.html"
+                                    class="header__navbar-icon--user user-1 header__menu-item--underlined">Đăng Nhập</a>
                                 <span class="header__navbar-icon--separator">/</span>
                                 <a href="dangky.html" class="header__navbar-icon--user">Đăng Ký</a>
                             </div>
                         </li>
-                        
+
                         <li class="header__navbar-icon">
-                            <a href="" class="header__navbar-icon--link"> 
-                                <i class="ti-shopping-cart-full"></i>
+                            <a class="header__navbar-icon--link">
+                                <i class="ti-shopping-cart-full header__navbar-icon--link---cart"></i>
+                                <p class="header__navbar-icon--link---quantity_cart">0</p>
                             </a>
                         </li>
                     </ul>
                 </div>
-            </nav>   
+            </nav>
             <div class="nav__overlay1"></div>
             <div class="nav__overlay2"></div>
         </header>
-        
+
+        <div class="showCart">
+            <div class="showCart-header__cover">
+                <div class="showCart-header">
+                    <div>
+                        <h2><span>0</span> sản phẩm</h2>
+                    </div>
+                    <div>
+                        <h1>Giỏ Hàng</h1>
+                    </div>
+                    <div>
+                        <h2 class="showCart-header_close">Đóng</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="showCart-none">
+                <i class="ti-shopping-cart"></i>
+                <p>Hiện chưa có sản phẩm</p>
+            </div>
+            <div id="mycart">
+
+            </div>
+            <div class="showCart-footer">
+                <div class="showCart-footer--into__money">
+                    <h2>TỔNG TIỀN:</h2>
+                    <p>0₫</p>
+                </div>
+                <div class="showCart-footer--button">
+                    <button>XEM GIỎ HÀNG</button>
+                </div>
+
+            </div>
+        </div>
+
         <div id="content__user">
             <div class="content__user-login">
                 <h1 class="content__user-login--title">Đăng Nhập</h1>
@@ -89,7 +129,8 @@
                         <i class="ti-lock content__user-login--icon"></i>
                         <i class="fa-regular fa-eye content__user-login--eye"></i>
                         <i class="fa-regular fa-eye-slash content__user-login--eye---close"></i>
-                        <input type="password" placeholder="Nhập mật khẩu" class="content__user-login--input---password">
+                        <input type="password" placeholder="Nhập mật khẩu"
+                            class="content__user-login--input---password">
                     </div>
                     <div>
                         <input type="submit" value="Đăng Nhập" class="content__user-login--submit">
@@ -100,13 +141,11 @@
                     </div>
                 </form>
             </div>
-        </div>    
-
-
+        </div>
 
         <footer id="footer">
             <div class="footer__header">
-                <div class="footer__NameOrigin">
+                <div class="footer__NameOrigin footer__touch-click">
                     <div class="footer__NameOrigin--name">
                         <i class="ti-angle-down footer__header-on--menu"></i>
                         <i class="ti-angle-up footer__header-close--menu"></i>
@@ -119,7 +158,7 @@
                             theo lời chia sẻ của Ngọc Anh founder.</p>
                       </div>
                 </div>
-                <div class="footer__addres">
+                <div class="footer__addres footer__touch-click">
                         <div class="footer__addre-name">
                             <i class="ti-angle-down footer__header-on--menu"></i>
                             <i class="ti-angle-up footer__header-close--menu"></i>
@@ -134,7 +173,7 @@
                         <p class="footer__addres-email">Daongocanh250420042@gmail.com</p>
                     </div>
                 </div>
-                <div class="footer__support">
+                <div class="footer__support footer__touch-click">
                     <div class="footer__support-name">
                         <i class="ti-angle-down footer__header-on--menu"></i>
                         <i class="ti-angle-up footer__header-close--menu"></i>
@@ -152,7 +191,7 @@
                     </div>
                     
                 </div>
-                <div class="footer__TakeCareOf">
+                <div class="footer__TakeCareOf footer__touch-click">
                     <div class="footer__TakeCareOf-name">
                         <i class="ti-angle-down footer__header-on--menu "></i>
                         <i class="ti-angle-up footer__header-close--menu"></i>
@@ -177,8 +216,10 @@
                     </div>
             </div>
         </footer>
-        
+
     </div>
     <script src="login.js"></script>
+    <script src="hiengiohang.js"></script>
 </body>
+
 </html>

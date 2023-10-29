@@ -164,6 +164,7 @@
 }
 /* Phần slider */
 .image__slider {
+    position: relative;
     margin-top: 80px;
 }
 .image__slider-item__img {
@@ -181,12 +182,13 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
     cursor: pointer;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     border: none;
+    z-index: 1;
+
 }
 .image__slider-arrow:hover {
     background-color: #000;
@@ -1002,7 +1004,8 @@
     opacity: 0.5;
 }
 /* màn hình mờ của giỏ hàng */
-.cart-blurred__screen {
+.cart-blurred__screen{
+    position: relative;
     position: fixed;
     top: 0;
     left: 0;
@@ -1068,15 +1071,28 @@
 }  
 .showCart {
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     width: 400px;
     background: #fff;
     right: 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-right: 40px;
+    margin-right: 32px;
     display: none;
     animation: showCart 0.7s ease-in-out;
+}
+.showCart:before {
+    position: absolute;
+    content: "";
+    right: 15px;
+    top: -12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    z-index: -1;
+
 }
 @keyframes showCart {
     0%{
@@ -1217,4 +1233,3 @@
 .showCart-header h2:nth-child(3) {
     display: none;
 }
-

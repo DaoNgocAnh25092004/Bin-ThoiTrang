@@ -195,10 +195,8 @@ function showCartProductNone() {
 showCartProductNone();
 // -------------------------- magrintop show cart -----------------------------
 
-if(window.location.href.includes('thongtinsanpham.html')) {
-    showCartInfo.style.marginTop = '-55px' 
-} else {
-    showCartInfo.style.marginTop = '-20px' 
+if(!window.location.href.includes('thongtinsanpham.html')) {
+    showCartInfo.style.marginTop = '-8px' 
 }
 
 // --------------------------------Số lượng sản phẩm ---------------------------

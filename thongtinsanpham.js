@@ -930,9 +930,7 @@ showCartProductNone();
 // -------------------------- magrintop show cart -----------------------------
 
 if (window.location.href.includes('thongtinsanpham.html')) {
-    showCartInfo.style.marginTop = '-55px'
-} else {
-    showCartInfo.style.marginTop = '-20px'
+    showCartInfo.style.marginTop = '-45px'
 }
 //------------------------- ẩn thanh toán khi click cart ----------------------
 const showMenuButtonAddProduct = document.querySelector('.content__information-item--buy__show');
@@ -981,6 +979,7 @@ if (window.innerWidth <= 740) {
     closeCartOnMobile.addEventListener('click', () => {
         showCartInfo.style.display = 'none';
         screeenBlurred.style.display = 'none';
+        // inforProductAddCart.style.display = 'block'
     })
  }
  clickCloseCartOnMobile();

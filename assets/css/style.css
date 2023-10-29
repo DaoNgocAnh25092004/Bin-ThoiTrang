@@ -163,16 +163,63 @@
     font-weight: 900;
 }
 /* Phần slider */
-#slider {
+.image__slider {
     margin-top: 80px;
-    padding-top: 50%;
-    background: url('/assets/image/img_slider/Bia2.webp');
-    /* Xác định vị trí bắt đầu hiển thị hình nền: */
-    background-position: top center;
-    /* Tùy chỉnh cách hình ảnh nền được trình bày: */
-    background-size: cover;
-    /* Đặt hình ảnh nền không được lặp lại: */
-    background-repeat: no-repeat;
+}
+.image__slider-item__img {
+    /* height: 660px; */
+    height: auto;
+    cursor: pointer;
+}
+.image__slider-item__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* nút left right slider */
+.image__slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+.image__slider-arrow:hover {
+    background-color: #000;
+    color: #fff;
+}
+.slick-prev {
+    left: 0; 
+}
+.slick-next {
+    right: 0;
+}
+/* vị trí index ở dưới img */
+.slick-dots {
+    position: absolute;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    margin-bottom: 20px;
+    gap: 0 20px;
+    list-style: none;
+}
+.slick-dots button {
+    font-size: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 100rem;
+    border: none;
+    cursor: pointer;
+}
+.slick-dots .slick-active button {
+    background-color: #000;
 }
 /* Sản Phẩm bán chạy */
 #content__selling-product h1 {

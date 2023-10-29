@@ -124,6 +124,16 @@
     .header__navbar-icon--link {
         margin-left: 10px;
     }
+    /* phần slider dưới header */
+    .slick-dots {
+        margin-bottom: 5px;
+        gap: 0 10px;
+    }
+    .slick-dots button {
+        height: 7px;
+        width: 7px;
+        
+    }
     /* symbol logo trang chính */
     .symbol__title{
         font-size: 20px;

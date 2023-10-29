@@ -1,28 +1,28 @@
-// ---------Hình ảnh chuyển đầu trang web-------------
-var imgSliders = [
-    'assets/image/img_slider/Bia2.webp',
-    'assets/image/img_slider/Bia1.jpg',
-    'assets/image/img_slider/Bia5.jpg',
-    'assets/image/img_slider/Bia4.jpg',
-    'assets/image/img_slider/Bia3.webp',
-    'assets/image/img_slider/Bia6.jpg'
-]
-var imgIndexSliders = 0;
-function changeImage () {
-    var slider = document.getElementById('slider');
-    slider.style.backgroundImage = `url(${imgSliders[imgIndexSliders]})`;
-    
-    imgIndexSliders++;
-    // lặp lại hình đầu nếu chạy hết
-    if(imgIndexSliders >= imgSliders.length){
-        imgIndexSliders = 0;
-    }
-    setTimeout(changeImage, 5000);
-};
-// bắt đầu thay đổi ảnh khi load lại trang
-window.onload = function(){
-    changeImage();
-};
+//-------------------------- slider img ------------------------------
+$(document).ready(function () {
+    $('.image__slider').slick({
+        slidesToShow: 1, // số phần tử hiện thị => mặc định là một
+        slidesToScroll: 1, // lướt qua 1 phần tử => mặc định là một
+        infinite: true, // chạy vô tận => mặc định là true
+        arrows: true, // Cho phép hiển thị phím mũi tên chạy => mặc định là true
+        autoplay: true,
+        autoplaySpeed: 3000, // tự động chạy sau 5000s
+        draggable: true, // cho phép tự lướt chuyển động
+        prevArrow: `<button type='button' class='slick-prev image__slider-arrow'><i class="fa-solid fa-arrow-left"></i></button>`,
+        nextArrow: `<button type='button' class='slick-next image__slider-arrow'><i class="fa-solid fa-arrow-right"></i></button>`,
+        dots: true, // các vị trí index ở dưới ảnh => mặc định là false
+        // màn hình nhỏ
+        responsive: [
+            {
+                breakpoint: 741,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
+    });
+});
+
 // --------------- <!--đóng mở thanh menu trên mobile --> -------------------
 // Lấy phần tử menu và nút menu
 const menu = document.querySelector('.header__navbar-item--menu');
@@ -30,7 +30,7 @@ const menuButton = document.querySelector('.header__btn i');
 const buttonClose = document.querySelector('.header__menu-close');
 const overlay1 = document.querySelector('.nav__overlay1');
 const overlay2 = document.querySelector('.nav__overlay2');
-const headerUser =document.querySelector('.icon-user');
+const headerUser = document.querySelector('.icon-user');
 const iconUser = document.querySelector('.header__navbar-icon--link---user');
 var screenWidth = window.innerWidth;
 // Xử lý sự kiện click
@@ -45,26 +45,26 @@ function closeMenuHeader() {
         buttonClose.style.display = 'none';
         overlay1.style.display = 'none'
 
-    } 
-    
+    }
+
 };
 function closeUserHeader() {
-    if(screenWidth <= 740) {
-        if(headerUser.style.display === 'none' || headerUser.style.display === '') {
+    if (screenWidth <= 740) {
+        if (headerUser.style.display === 'none' || headerUser.style.display === '') {
             headerUser.style.display = 'block';
             overlay2.style.display = 'block'
             menu.style.display = 'none';
-    
-    
-        } else  {
+
+
+        } else {
             headerUser.style.display = 'none';
             overlay2.style.display = 'none'
             menu.style.display = 'none';
-    
-    
+
+
         }
     }
-    
+
 }
 menuButton.addEventListener('click', closeMenuHeader);
 buttonClose.addEventListener('click', closeMenuHeader);
@@ -81,9 +81,9 @@ const itemFooters = document.querySelectorAll('.footer__touch-click');
 // biến để theo dõi sự kiện click itemFooters
 let itemFootersClicked = new Array(itemFooters.length).fill(true);
 function clickOnMenuFooter() {
-   itemFooters.forEach((itemFooters, index) => {
+    itemFooters.forEach((itemFooters, index) => {
         itemFooters.addEventListener('click', () => {
-            if(itemFootersClicked[index]) {
+            if (itemFootersClicked[index]) {
                 onMenuFooters[index].style.display = 'none';
                 closeMenuFooters[index].style.display = 'block';
                 textFooters[index].style.display = 'block';
@@ -95,7 +95,7 @@ function clickOnMenuFooter() {
                 itemFootersClicked[index] = true;
             }
         })
-   })
+    })
 }
 clickOnMenuFooter();
 

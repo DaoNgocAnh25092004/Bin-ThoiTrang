@@ -394,12 +394,15 @@
         bottom: 0;
         left: 0;
         right: 0 !important;
-        z-index: 2;
+        z-index: 3;
         width: 100%;
         border: none;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         animation: crollBotToTop 0.8s ease-in-out;
+    }
+    .showCart::before  {
+        display: none;
     }
     @keyframes crollBotToTop {
         0% {
@@ -411,7 +414,6 @@
             transform: translateY(0);
         }
     }
-    
     .showCart__info-img {
         align-items: center;
         height: 85px;

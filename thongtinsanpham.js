@@ -974,12 +974,13 @@ if (window.innerWidth <= 740) {
  updateProductCount();
  //--------------------------------- đóng cart on mobile -----------------------
  const closeCartOnMobile = document.querySelector('.showCart-header_close')
+ const menuinforProductAddCart = document.querySelector('.content__information-item--buy')
  // hàm ẩn cart on mobile
  function clickCloseCartOnMobile() {
     closeCartOnMobile.addEventListener('click', () => {
         showCartInfo.style.display = 'none';
         screeenBlurred.style.display = 'none';
-        // inforProductAddCart.style.display = 'block'
+        showMenuButtonAddProduct.style.display = 'block';
     })
  }
  clickCloseCartOnMobile();

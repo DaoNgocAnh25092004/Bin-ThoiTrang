@@ -6,7 +6,7 @@ $(document).ready(function () {
         infinite: true, // chạy vô tận => mặc định là true
         arrows: true, // Cho phép hiển thị phím mũi tên chạy => mặc định là true
         autoplay: true,
-        autoplaySpeed: 3000, // tự động chạy sau 5000s
+        autoplaySpeed: 1000, // tự động chạy sau 5000s
         draggable: true, // cho phép tự lướt chuyển động
         prevArrow: `<button type='button' class='slick-prev image__slider-arrow'><i class="fa-solid fa-arrow-left"></i></button>`,
         nextArrow: `<button type='button' class='slick-next image__slider-arrow'><i class="fa-solid fa-arrow-right"></i></button>`,

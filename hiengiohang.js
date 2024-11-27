@@ -65,7 +65,6 @@ function showMyCart() {
                 <div class="showCart__info-header">
                     <p>${gioHang[i].ten}</p>
                     <i class="ti-close ti-close__cart"></i>
-                    
                 </div>
                 <div class="showCart__info-size">
                     <p>SIZE: ${gioHang[i].sizeSanPham}</p>

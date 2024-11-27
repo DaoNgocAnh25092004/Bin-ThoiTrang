@@ -152,8 +152,8 @@ items = [
     //Ảnh áo
     {
         img1: './assets/image/img_items/img_shirt/shirt_1/anh_1.webp',
-        img2: './assets/image/img_items/img_shirt/shirt_1/anh_2.webp',
-        img3: './assets/image/img_items/img_shirt/shirt_1/anh_3.webp',
+        img2: './mage/img_items/img_shirt/shirt_1/anh_2.webp',
+        img3: './assets/imagassets/ie/img_items/img_shirt/shirt_1/anh_3.webp',
         imgMain: './assets/image/img_items/img_shirt/shirt_1/anh_1.webp',
         name: 'Áo Thun Bin Dây Rút Kem - ATRK',
         priceDiscount: '350,000₫',
